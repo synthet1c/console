@@ -1,0 +1,24 @@
+@import '~theme';
+
+.root {
+  padding: .5em;
+  &:nth-of-type(odd) {
+    background: #f7f7f7;
+  }
+}
+
+.header {
+
+}
+
+.heading {
+  // color: $primary;
+}
+
+.content {
+
+}
+
+.comment {
+  padding: .5em;
+}
