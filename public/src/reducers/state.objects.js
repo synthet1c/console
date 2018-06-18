@@ -1,4 +1,6 @@
-export default {
+import formatItem from '../utils/formatItem'
+
+const objects = {
 	"Coredna\\Cart3\\Cart3View": [
 		{
 			"name": "__construct",
@@ -2806,3 +2808,15 @@ export default {
 		}
 	]
 }
+
+const formatted =  Object
+	.keys(objects)
+	.reduce((acc, clazz) => {
+		acc[clazz] = objects[clazz].map(formatItem(clazz))
+		return acc
+	}
+	, {})
+
+console.log('formatted', formatted)
+
+export default formatted

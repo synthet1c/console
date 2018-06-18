@@ -4,12 +4,14 @@ import PropTypes from 'prop-types'
 
 import styles from './App.scss'
 
+import Search from '../Search'
 import Constructor from '../Constructor'
 
 const App = ({ classes }) =>
 	<main className={styles.root}>
 		<h3 className={styles.heading}>App</h3>
 		<section>
+			<Search />
 			{Object.keys(classes).map((key, ii) =>
 				<Constructor name={key} methods={classes[key]} key={ii} />
 			)}
